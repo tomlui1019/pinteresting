@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+$body-bg: 						#ecf0f1;
+$font-family-sans-serif:		'Roboto+Condensed','Lato';
+$navbar-default-bg: 			white;
+$navbar-default-brand-color:	#e74c3c;
+$navbar-link-color: 			#ecf0f1;
+$brand-primary: 				#e74c3c;
+$jumbotron-bg: 					white;
+
+@import "bootstrap";
+
+.center {
+	text-align: center;
+}
+
+.navbar-brand {
+	font-weight: bold;
+}
