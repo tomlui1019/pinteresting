@@ -71,6 +71,10 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+  # Required for Heroku
+  #Note to set this to your actual host
+  config.action_mailer.default_url_options = { host: => `tomlui-pinteresting.herokuapp.com/` }
+
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
