@@ -30,21 +30,17 @@ class PinsController < ApplicationController
 
 
   def update
-    respond_to do |format|
-      if @pin.update(pin_params)
+    if @pin.update(pin_params)
         redirect_to @pin, notice: 'Pin was successfully updated.'
-      else
+    else
         render :edit 
-      end
     end
   end
 
 
   def destroy
     @pin.destroy
-    respond_to do |format|
-      redirect_to pins_url, notice: 'Pin was successfully destroyed.'
-    end
+    redirect_to pins_url, notice: 'Pin was successfully destroyed.'
   end
 
   private
@@ -60,6 +56,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
