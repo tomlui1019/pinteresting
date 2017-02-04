@@ -7,8 +7,11 @@ $navbar-default-brand-color:	#e74c3c;
 $navbar-link-color: 			#ecf0f1;
 $brand-primary: 				#e74c3c;
 $jumbotron-bg: 					white;
+$panel-body:					white;
 
-@import "bootstrap";
+@import "bootstrap-sprockets";
+@import 'bootstrap';
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
 
 .center {
 	text-align: center;
