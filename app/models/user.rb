@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, password_length: 6..8
 
     has_many :pins
+  	validates :name, presence: true
+  	
 end
